@@ -13,10 +13,10 @@ on:
   workflow_dispatch:
 
 env:
-  MANIFEST: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni -b twrp-10.0-deprecated
-  DEVICE: BF7
-  DT_LINK: https://github.com/twrpdtgen/android_device_tecno_TECNO-BF7.git
-  DT_PATH: device/tecno/BF7
+  MANIFEST: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni -b twrp-12.0-deprecated
+  DEVICE: Bf7
+  DT_LINK: https://github.com/twrpdtgen/android_device_tecno_TECNO-BF7/tree/vnd_bf7_h6127-user-12-SP1A.210812.016-274334-release-keys
+  DT_PATH: device/tecno/Bf7
   TARGET: recoveryimage
   TZ: Asia/manila
 
@@ -62,7 +62,7 @@ jobs:
          env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
          with:
-          tag_name: TWRP_10.0
+          tag_name: TWRP_12.0
           name: TWRP-BF7
           files: | 
-            work/out/target/product/BF7/recovery.img
+            work/out/target/product/Bf7/recovery.img
